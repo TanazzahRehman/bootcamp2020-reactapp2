@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import './Room.css';
 
 //console.log("state=" ,state);
 
@@ -12,13 +13,13 @@ function Room() {
     }
 
     const incrementor = () => {
-        console.log("increase age by 1");
+        console.log("increase age ");
         setage(++age);
      }
     
   return (
       
-    <div>
+    <div className={"room " +(islit?"lit":"dark")} >
       this room is {islit ? "lit": "dark"}
    
        <br /> 
@@ -28,7 +29,7 @@ function Room() {
        <br />
        <button onClick = { () =>
         {
-        console.log("increase age by 1");
+        console.log("increase age");
         setage(++age);
        }}>
             increment age </button>
